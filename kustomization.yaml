@@ -1,0 +1,38 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - base/namespace.yaml
+  - base/ingress.yaml
+  - base/network-policy.yaml
+  - apps/backend/deployment.yaml
+  - apps/backend/service.yaml
+  - apps/backend/hpa.yaml
+  - apps/frontend/deployment.yaml
+  - apps/frontend/service.yaml
+  - apps/frontend/ingress.yaml
+  - databases/postgresql/deployment.yaml
+  - databases/postgresql/service.yaml
+  - databases/postgresql/pvc.yaml
+  - databases/postgresql/secret.yaml
+  - databases/mysql/deployment.yaml
+  - databases/mysql/service.yaml
+  - databases/mysql/pvc.yaml
+  - databases/mysql/secret.yaml
+  - databases/mongodb/statefulset.yaml
+  - databases/mongodb/service.yaml
+  - databases/mongodb/pvc.yaml
+  - databases/redis/deployment.yaml
+  - databases/redis/service.yaml
+  - storage/minio/deployment.yaml
+  - storage/minio/service.yaml
+  - storage/minio/pvc.yaml
+  - storage/longhorn/storage-class.yaml
+  - monitoring/prometheus.yaml
+  - monitoring/grafana.yaml
+  - monitoring/loki.yaml
+  - monitoring/thanos.yaml
+  - security/vault.yaml
+  - security/rbac.yaml
+  - security/cert-manager.yaml
+  - argocd/applications.yaml
+  - argocd/projects.yaml
