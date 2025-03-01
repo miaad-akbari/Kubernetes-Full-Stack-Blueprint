@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thanos
+  namespace: production
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thanos
+  template:
+    metadata:
+      labels:
+        app: thanos
+    spec:
+      containers:
+        - name: thanos
+          image: thanosio/thanos:v0.22.0
+          ports:
+            - containerPort: 10902
