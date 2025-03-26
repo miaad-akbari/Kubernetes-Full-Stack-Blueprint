@@ -23,23 +23,36 @@ k8s/
 │
 │── databases/ # Databases
 │ │── postgresql/
+| │── volume-storageclass/
+| │ │── pvc.yaml
+| │── volume-hostPath/
+| | │── pv-pvc-hostpath.yaml
 │ │ │── deployment.yaml
 │ │ │── service.yaml
-│ │ │── pvc.yaml
 │ │ │── secret.yaml
 │ │
 │ │── mysql/
+| │── volume-storageclass/
+| │ │── pvc.yaml
+| │── volume-hostPath/
+| | │── pv-pvc-hostpath.yaml
 │ │ │── deployment.yaml
 │ │ │── service.yaml
-│ │ │── pvc.yaml
 │ │ │── secret.yaml
 │ │
 │ │── mongodb/
+| │── volume-storageclass/
+| │ │── pvc.yaml
+| │── volume-hostPath/
+| | │── pv-pvc-hostpath.yaml
 │ │ │── statefulset.yaml
 │ │ │── service.yaml
-│ │ │── pvc.yaml
 │ │
 │ │── redis/
+| │── volume-storageclass/
+| │ │── pvc.yaml
+| │── volume-hostPath/
+| | │── pv-pvc-hostpath.yaml
 │ │ │── deployment.yaml
 │ │ │── service.yaml
 │
